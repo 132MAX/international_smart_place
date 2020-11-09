@@ -9,7 +9,7 @@
     background-repeat: no-repeat;
     background-position: 50px -222px;
     background-size: cover;
-    z-index: 1;
+    z-index: 4;
 }
 
 .home__info__img::after {
@@ -36,9 +36,29 @@
 }
 
 .home__line {
-    height: 100%;
+    height: 97%;
     background: linear-gradient(112.52deg, #4B5DFF 41.89%, #03CBFF 85.3%);
     position: relative;
+}
+
+.home__wave {
+    position: relative;
+    width: 100%;
+    height: 3%;
+}
+
+.home__wave::before {
+    transform: scale(-1, 1);
+    bottom: 10px;
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 200px;
+    background-size: 100% 100%;
+    background-image: url("wave_top.png");
+    background-repeat: repeat-y;
+    background-position: center;
+    z-index: 1;
 }
 
 .home__menu {
@@ -138,6 +158,8 @@
     border: none;
     margin-top: 32px;
     transition: all 0.3s;
+    position: relative;
+    z-index: 5;
 }
 
 .home__info__textButton:hover {

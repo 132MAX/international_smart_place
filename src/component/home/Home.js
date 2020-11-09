@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import HamburgerMenu from "react-hamburger-menu"
-//import Headhesive from "headhesive"
+import Headhesive from "headhesive"
 import "./style.css"
 
 const homeArr = [{
@@ -57,100 +57,100 @@ function ExpandedMenu() {
 function Products() {
     return <div className="products">{
         products.map((elem, index) => {
-          //  const img = elem.img
+            //  const img = elem.img
             return <div className="products__elem">
                 <div className="products__elem__img"
-                style={{backgroundImage: `url("{elem.img}")`}}>{elem.img}</div>
+                    style={{ backgroundImage: `url("{elem.img}")` }}>{elem.img}</div>
                 <div className="">{elem.name}</div>
             </div>
         })
     }</div>
 }
-export default () => {
-  //  var header = new Headhesive('.header', options);
-        var options = {
-            offset: 500
-          }
-    const [open, setOpen] = useState(false)
-    console.log(open)
-
-    return (
-        <div className="div">
-            <div className="home">
-                <div className="home__line">
-                    <div className="conteiner">
-                        <menu className="home__menu menu header">
-                            <div className="home__menu__logo">
-                                International Smart Place</div>
-                            <nav className="home__menu__nav">
-                                <a href="#">Как проходит обучение</a>
-                                <a href="#">Преимущества</a>
-                                <a href="#">Инструкция</a>
-                                <a href="#">Преподаватели</a>
-                                <a className="home__menu__nav--enter" href="#" >Войти</a>
-                                <div className="hamburgerMenu"
-                                    onClick={() => setOpen(!open)}>
-                                    <HamburgerMenu
-                                        isOpen={open}
-                                        menuClicked={() => setOpen(!open)}
-                                        width={32}
-                                        height={15}
-                                        strokeWidth={2}
-                                        rotate={0}
-                                        color='white'
-                                        borderRadius={0}
-                                        animationDuration={0.5}
-                                    /></div>
-                            </nav>
-                        </menu>
-
-                        <div className="home__info">
-                            <div className="home__info__text">
-                                <div >Бизнес Академия </div>
-                                <p className="title">International Smart Place</p>
-                                <p className="home__info__textQuestion">Как изменить свою жизнь?</p>
-                                <p className="home__info__textQuestion">Как начать инвестировать деньги?</p>
-                                <p className="home__info__textQuestion">Как правильно приобрести недвижимость?</p>
-                                <p className="home__info__textQuestion">Как создать свою команду?</p>
-                                <button className="home__info__textButton">Начать обучение</button>
-                            </div>
-                            <div className="home__info__img">
-                            </div>
+function Menu(props) {
+    return <menu className="home__menu ">
+        <div className="home__menu__logo">
+            International Smart Place</div>
+        <nav className="home__menu__nav">
+            <a href="#">Как проходит обучение</a>
+            <a href="#">Преимущества</a>
+            <a href="#">Инструкция</a>
+            <a href="#">Преподаватели</a>
+            <a className="home__menu__nav--enter" href="#" >Войти</a>
+            <div className="hamburgerMenu"
+                onClick={() => props.setOpen(!props.open)}>
+                <HamburgerMenu
+                    isOpen={props.open}
+                    menuClicked={() => props.setOpen(!props.open)}
+                    width={32}
+                    height={15}
+                    strokeWidth={2}
+                    rotate={0}
+                    color='white'
+                    borderRadius={0}
+                    animationDuration={0.5}
+                /></div>
+        </nav>
+    </menu>
+}
+        function Facial(props){
+            return <div className="home">
+            <div className="home__line">
+                <div className="conteiner">
+                    <Menu
+                        open={props.open}
+                        setOpen={props.setOpen}
+                    />
+                    <div className="home__info">
+                        <div className="home__info__text">
+                            <div >Бизнес Академия </div>
+                            <p className="title">International Smart Place</p>
+                            <p className="home__info__textQuestion">Как изменить свою жизнь?</p>
+                            <p className="home__info__textQuestion">Как начать инвестировать деньги?</p>
+                            <p className="home__info__textQuestion">Как правильно приобрести недвижимость?</p>
+                            <p className="home__info__textQuestion">Как создать свою команду?</p>
+                            <button className="home__info__textButton">Начать обучение</button>
+                        </div>
+                        <div className="home__info__img">
                         </div>
                     </div>
                 </div>
             </div>
-            <div className="home__menuDescription">
-                <div className="conteiner">
-                    <menu className="home__menu">
-                        <div className="home__menu__logo">
-                            International Smart Place</div>
-                        <nav className="home__menu__nav">
+            <div className="home__wave"></div>
+        </div>
+}
 
-                            <div className=" home__menu__nav--enterBlack" href="#" >Войти</div>
-                            <div className="hamburgerMenu"
-                                onClick={() => setOpen(!open)}>
-                                <HamburgerMenu
-                                    isOpen={open}
-                                    menuClicked={() => setOpen(!open)}
-                                    width={32}
-                                    height={15}
-                                    strokeWidth={2}
-                                    rotate={0}
-                                    color='black'
-                                    borderRadius={0}
-                                    animationDuration={0.5}
-                                /></div>
-                        </nav>
-                    </menu>
-                    <div className="">
-                        <ExpandedMenu />
-                    </div>
-                    <div className="home__menuDescription__products">Продукты</div>
-               <div className=""><Products/></div>
-                
-                </div>
-            </div>
+    function Reverse (props){
+    return <div className="home__menuDescription">
+    <div className="conteiner">
+        <Menu
+            open={props.open}
+            setOpen={props.setOpen}
+        />
+        <div className="">
+            <ExpandedMenu />
+        </div>
+        <div className="home__menuDescription__products">Продукты</div>
+        <div className=""><Products /></div>
+    </div>
+</div>
+    }
+
+
+export default () => {
+    //var header = new Headhesive(Menu);
+    const [open, setOpen] = useState(false)
+    var options = {
+        offset: 500
+    }
+
+    // const text=open?  reverse :facial
+    return (
+        <div className="div">
+           { open?  <Reverse
+        open={open}
+        setOpen={setOpen} />: <Facial
+        open={open}
+        setOpen={setOpen}/>}
         </div>
     )
 }
