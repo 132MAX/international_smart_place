@@ -1,3 +1,29 @@
+.home__info__img::before {
+    position: absolute;
+    content: "";
+    width: 790px;
+    height: 370px;
+    top: -191px;
+    left: -93px;
+    background-image: url("pk1.png");
+    background-repeat: no-repeat;
+    background-position: 50px -222px;
+    background-size: cover;
+    z-index: 1;
+}
+
+.home__info__img::after {
+    position: absolute;
+    content: "";
+    background-image: url("pk.png");
+    width: 492px;
+    height: 305px;
+    top: -165px;
+    left: 123px;
+    z-index: 5;
+    border-radius: 5px;
+}
+
 .conteiner {
     max-width: 1200px;
     margin: 0 auto;
@@ -57,7 +83,12 @@
     line-height: 22px;
     margin-left: 30px;
     color: #fff;
-    
+    transition: all 0.3s;
+}
+
+.home__menu__nav a:hover,
+.home__menu__nav div:hover {
+    color: #E5E5E5;
 }
 
 .home__menu__nav--enter {
@@ -68,12 +99,15 @@
 
 .hamburgerMenu {
     cursor: pointer;
+    padding-bottom: 0;
+    border-bottom: 2px solid none;
 }
 
 .home__info {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 163px;
 }
 
 .title {
@@ -90,72 +124,73 @@
 
 .home__info__img {
     width: 676px;
-   
     position: relative;
 }
 
-.home__info__img::before {
-    position: absolute;
-    content: "";
-    
-    width: 790px;
-    height: 370px;
-    top: -130px;
-    left: -93px;
-    background-image: url("pk1.png");
-    background-repeat: no-repeat;
-    background-position: 50px -222px;
-    background-size: cover;
-    z-index: 1;
-    
+.home__info__textButton {
+    color: #03CBFF;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 15px 23px 18px;
+    font-size: 16px;
+    line-height: 22px;
+    color: #4B5DFF;
+    border: none;
+    margin-top: 32px;
+    transition: all 0.3s;
 }
- .home__info__img::after {
-    position: absolute;
-    content: "";
-    background-image: url("pk.png");
-    width: 492px;
-    height: 305px;
-    top: -104px;
-    left: 123px;
-    z-index: 5;
-    border-radius: 5px;
-} 
+
+.home__info__textButton:hover {
+    background-color: #E5E5E5;
+}
 
 .home__info__textQuestion {
     font-weight: normal;
     font-size: 20px;
     line-height: 22px;
 }
-.home__menuDescription{
+
+.home__menuDescription {
     height: 100vh;
-    background-color:#E5E5E5 ;
+    background-color: #E5E5E5;
     color: #323448;
 }
- .home__menuDescription .home__menu__nav div{
+
+.home__menuDescription .home__menu__nav div {
     color: #323448;
-} 
+}
+
 .home__menuDescription .home__menu__nav--enter,
-.home__menu__nav--enterBlack
-{
+.home__menu__nav--enterBlack {
     border: 1px solid #323448;
     padding: 13px 45px 18px 44px;
     border-radius: 10px;
     cursor: pointer;
 }
-.expanded{
+
+.expanded {
     margin-top: 164px;
     display: flex;
-    
 }
-.expandedElem{
+
+.expandedElem {
     margin-right: 162px;
     margin-bottom: 13px;
 }
-.expandedElem div{
+
+.expandedElem div {
     margin-bottom: 13px;
     opacity: 0.6;
 }
-.expandedElem .arr__title{
+
+.expandedElem .arr__title {
     opacity: 1;
     margin-bottom: 22px;
+}
+
+.products__elem__img {
+    width: 56px;
+    height: 56px;
+    background-position: center;
+    background-repeat: no-repeat;
 }

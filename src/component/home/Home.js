@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import HamburgerMenu from "react-hamburger-menu"
+//import Headhesive from "headhesive"
 import "./style.css"
 
 const homeArr = [{
@@ -28,16 +29,16 @@ const homeArr = [{
     name4: "О компании"
 }]
 const products = [{
-    img: "",
+    img: "f1.png",
     name: "GrandWay"
 }, {
-    img: "",
+    img: "f2.png",
     name: "ProfitWay"
 }, {
-    img: "",
+    img: "f3.png",
     name: "HomeWay"
 }, {
-    img: "",
+    img: "f4.png",
     name: "Marketing"
 }]
 function ExpandedMenu() {
@@ -56,14 +57,20 @@ function ExpandedMenu() {
 function Products() {
     return <div className="products">{
         products.map((elem, index) => {
-            return <div className="">
-                <div className="">{elem.img}</div>
+          //  const img = elem.img
+            return <div className="products__elem">
+                <div className="products__elem__img"
+                style={{backgroundImage: `url("{elem.img}")`}}>{elem.img}</div>
                 <div className="">{elem.name}</div>
             </div>
         })
     }</div>
 }
 export default () => {
+  //  var header = new Headhesive('.header', options);
+        var options = {
+            offset: 500
+          }
     const [open, setOpen] = useState(false)
     console.log(open)
 
@@ -72,7 +79,7 @@ export default () => {
             <div className="home">
                 <div className="home__line">
                     <div className="conteiner">
-                        <menu className="home__menu">
+                        <menu className="home__menu menu header">
                             <div className="home__menu__logo">
                                 International Smart Place</div>
                             <nav className="home__menu__nav">
