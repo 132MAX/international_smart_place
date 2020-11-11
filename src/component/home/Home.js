@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import HamburgerMenu from "react-hamburger-menu"
-import Headhesive from "headhesive"
+import Bounce from 'react-reveal/Bounce';
+//import Headhesive from "headhesive"
 import "./style.css"
 
 const homeArr = [{
@@ -59,8 +60,7 @@ function Products() {
         products.map((elem, index) => {
             //  const img = elem.img
             return <div className="products__elem">
-                <div className="products__elem__img"
-                    style={{ backgroundImage: `url("{elem.img}")` }}>{elem.img}</div>
+                <img src={elem.img} alt=""/>
                 <div className="">{elem.name}</div>
             </div>
         })
@@ -93,7 +93,7 @@ function Menu(props) {
     </menu>
 }
         function Facial(props){
-            return <div className="home">
+            return  <Bounce left><div className="home">
             <div className="home__line">
                 <div className="conteiner">
                     <Menu
@@ -116,11 +116,11 @@ function Menu(props) {
                 </div>
             </div>
             <div className="home__wave"></div>
-        </div>
+        </div></Bounce>
 }
 
     function Reverse (props){
-    return <div className="home__menuDescription">
+    return   <div className="home__menuDescription"><Bounce right>
     <div className="conteiner">
         <Menu
             open={props.open}
@@ -131,7 +131,7 @@ function Menu(props) {
         </div>
         <div className="home__menuDescription__products">Продукты</div>
         <div className=""><Products /></div>
-    </div>
+    </div></Bounce>
 </div>
     }
 
