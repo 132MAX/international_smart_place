@@ -1,0 +1,33 @@
+.banner__img {
+    max-height: 552px;
+}
+
+.banner__elem {
+    position: relative;
+}
+
+.banner__text {
+    position: absolute;
+    content: "";
+    max-width: 351px;
+    height: 210px;
+    background-color: #4B5DFF;
+    bottom: -20px;
+    right: 10px;
+    color: #fff;
+    padding: 24px 37px 70px 27px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 19px;
+}
+
+.banner__text p {
+    margin-bottom: 20px;
+}
+
+.banner__text span {
+    font-weight: 300;
+    font-size: 16px;
+    opacity: 0.6;
+    margin-left: 205px;
+}
