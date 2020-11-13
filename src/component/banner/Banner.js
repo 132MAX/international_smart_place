@@ -3,7 +3,7 @@ import Banner from "./banner.png"
 import "./style.css"
 
 export default () => {
-    return <div className="banner">
+    return <div className="bannerimg">
         <div className="conteiner">
             <div className="banner__elem">
                 <img className="banner__img" src={Banner} alt="" />

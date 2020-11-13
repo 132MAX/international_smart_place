@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import HamburgerMenu from "react-hamburger-menu"
 import Bounce from 'react-reveal/Bounce';
-//import Headhesive from "headhesive"
+import Headhesive from "headhesive"
 import "./style.css"
 
 const homeArr = [{
@@ -33,7 +33,7 @@ const products = [{
     img: "f1.png",
     name: "GrandWay"
 }, {
-    img: "f2.png",
+    img: "f4.png",
     name: "ProfitWay"
 }, {
     img: "f3.png",
@@ -60,15 +60,16 @@ function Products() {
         products.map((elem, index) => {
             //  const img = elem.img
             return <div className="products__elem">
-                <img src={elem.img} alt=""/>
+                <img src={elem.img} alt="" />
                 <div className="">{elem.name}</div>
             </div>
         })
     }</div>
 }
 function Menu(props) {
-    return <menu className="home__menu ">
-        <div className="home__menu__logo">
+
+    return <menu className="home__menu  ">
+        <div className="home__menu__logo ">
             International Smart Place</div>
         <nav className="home__menu__nav">
             <a href="#">Как проходит обучение</a>
