@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import HamburgerMenu from "react-hamburger-menu"
 import Bounce from 'react-reveal/Bounce';
-import Headhesive from "headhesive"
+
 import "./style.css"
 
 const homeArr = [{
@@ -94,7 +94,7 @@ function Menu(props) {
     </menu>
 }
         function Facial(props){
-            return  <Bounce left><div className="home">
+            return  <div className="home">
             <div className="home__line">
                 <div className="conteiner">
                     <Menu
@@ -117,7 +117,7 @@ function Menu(props) {
                 </div>
             </div>
             <div className="home__wave"></div>
-        </div></Bounce>
+        </div>
 }
 
     function Reverse (props){

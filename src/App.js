@@ -4,6 +4,7 @@ import Banner from "./component/banner/Banner"
 import Menu from "./component/menu/Menu"
 import During from "./component/during/During"
 import BannerTwo from "./component/bannerTwo/BannerTwo"
+import UndergoingTraning from "./component/undergoingTraining/UndergoingTraining"
 import "./reset.css"
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <Banner/>
       <During/>
       <BannerTwo/>
+      <UndergoingTraning/>
     </div>
   );
 }
