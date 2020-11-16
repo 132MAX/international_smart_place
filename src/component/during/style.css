@@ -1,0 +1,60 @@
+.during__info,
+.during__answer {
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 32px;
+    margin: 60px 0 100px 0;
+    width: 297px;
+}
+
+.during__box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.during__box__elem {
+    width: 544px;
+}
+
+.during__name {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 17px;
+    color: #4B5DFF;
+    margin-top: 27px;
+    margin-bottom: 20px;
+}
+
+.during__text {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 32px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #CDCCCC;
+}
+
+.during__answer {
+    width: 555px;
+}
+
+.during__answer p {
+    color: #4B5DFF;
+    margin-bottom: 36px;
+}
+
+.during__button {
+    width: 149px;
+    height: 51px;
+    background: #4B5DFF;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    color: #FFFFFF;
+    transition: all 0.4s;
+}
+
+.during__button:hover {
+    font-size: 20px;
+}

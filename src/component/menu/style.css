@@ -1,4 +1,6 @@
-.menuFixed{    background-color: blue;
+.menuFixed {
+    background-color: #4B5DFF;
     position: sticky;
-   z-index: 87;
-    top: 0;}
+    z-index: 87;
+    top: 0;
+}

@@ -1,0 +1,43 @@
+.banner__fonts {
+    background-color: #4B5DFF;
+    width: 1202px;
+    height: 352px;
+    border-radius: 10px;
+    color: #D7DEFF;
+}
+
+.banner__fonts__name {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 17px;
+    color: #D7DEFF;
+    padding: 77px 0 10px 42px;
+}
+
+.banner__fonts__text {
+    width: 624px;
+    font-family: "Montserrat" sans-serif;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 39px;
+    color: #FFFFFF;
+    padding-bottom: 41px;
+    padding-left: 42px;
+}
+
+.banner__fonts__button {
+    margin-left: 42px;
+    width: 180px;
+    height: 51px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    color: #4B5DFF;
+    font-weight: 500;
+    font-size: 16px;
+    transition: all 0.4s;
+}
+
+.banner__fonts__button:hover {
+    font-size: 18px;
+    font-weight: 700;
+}

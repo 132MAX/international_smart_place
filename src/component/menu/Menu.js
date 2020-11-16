@@ -1,7 +1,8 @@
 import React, { useState } from "react"
 import "./style.css"
 export default()=>{
-    return <menu className="home__menu  ">
+    return <div className="conteiner">
+    <menu className="home__menu  ">
     <div className="home__menu__logo ">
         International Smart Place</div>
     <nav className="home__menu__nav">
@@ -13,4 +14,5 @@ export default()=>{
     
     </nav>
 </menu>
+</div> 
 }

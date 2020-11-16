@@ -4,6 +4,7 @@
 
 .banner__elem {
     position: relative;
+    overflow: hidden;
 }
 
 .banner__text {
