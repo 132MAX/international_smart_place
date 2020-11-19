@@ -7,7 +7,8 @@
     position: relative;
     overflow: hidden;
 }
-.banner__fonts::before{
+
+.banner__fonts::before {
     position: absolute;
     content: "";
     width: 373px;
@@ -19,7 +20,8 @@
     z-index: 5;
     background-image: url("./fotoBottom.png");
 }
-.banner__fonts::after{
+
+.banner__fonts::after {
     position: absolute;
     content: "";
     border-radius: 30px;
@@ -31,7 +33,6 @@
     top: 117px;
     z-index: 7;
     background-image: url("./fotoTop.png");
-
 }
 
 .banner__fonts__name {
@@ -69,8 +70,11 @@
     font-size: 18px;
     font-weight: 700;
 }
-.oleg{
+
+.oleg {
+    flex-wrap: wrap;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    position: absolute;
 }

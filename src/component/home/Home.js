@@ -33,7 +33,7 @@ const products = [{
     img: "f1.png",
     name: "GrandWay"
 }, {
-    img: "f4.png",
+    img: "f2.png",
     name: "ProfitWay"
 }, {
     img: "f3.png",

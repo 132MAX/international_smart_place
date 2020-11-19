@@ -5,6 +5,7 @@ import Menu from "./component/menu/Menu"
 import During from "./component/during/During"
 import BannerTwo from "./component/bannerTwo/BannerTwo"
 import UndergoingTraning from "./component/undergoingTraining/UndergoingTraining"
+import Stages from "./component/stages/Stages"
 import "./reset.css"
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
       <During/>
       <BannerTwo/>
       <UndergoingTraning/>
+      <Stages/>
     </div>
   );
 }
