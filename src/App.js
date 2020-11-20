@@ -6,6 +6,8 @@ import During from "./component/during/During"
 import BannerTwo from "./component/bannerTwo/BannerTwo"
 import UndergoingTraning from "./component/undergoingTraining/UndergoingTraining"
 import Stages from "./component/stages/Stages"
+import Benefits from "./component/benefits/Benefits"
+import Teachers from "./component/teachers/Teachers"
 import "./reset.css"
 
 function App() {
@@ -20,6 +22,8 @@ function App() {
       <BannerTwo/>
       <UndergoingTraning/>
       <Stages/>
+      <Benefits/>
+      <Teachers/>
     </div>
   );
 }
