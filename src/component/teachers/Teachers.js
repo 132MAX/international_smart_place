@@ -40,7 +40,6 @@ const useStyle = createUseStyles({
     },
     info: {
         width: "100%",
-        height: "100%",
         display: 'none',
         left: 0,
         bottom: 0,
