@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { createUseStyles } from 'react-jss'
 const useStyle = createUseStyles({
     teachers__title: {
@@ -29,25 +29,27 @@ const useStyle = createUseStyles({
         height: 671,
         boxShadow: '4px 4px 20px rgba(0, 0, 0, 0.25)',
         marginBottom: 137,
-        position: 'relative', 
+        position: 'relative',
+        "&:hover" : {
+            // display: 'none',
+         }
     },
-    teachers__elem__home:{
+    teachers__elem__home: {
         width: "100%",
         height: "100%",
-       "&:hover":{
-        display: 'none',
-    } 
+        transition:"all 0.4s",
+        "&:hover": {
+           // display: 'none',
+        }
     },
     info: {
-        width: "100%",
-        display: 'none',
-        left: 0,
-        bottom: 0,
-        right: 0,
-        top: 0,
-        "&:hover":{
-            display: 'block',
-        } 
+     
+        display: 'block',
+        margin: { top: "42px", right: "20px", left: "23px" },
+        
+        "&:hover": {
+            
+        }
     },
     description: {
         fontWeight: 'normal',
@@ -74,54 +76,96 @@ const teachers = [{
     description: "Эксперт по бизнесу",
     name: "Брюнеткин Максим",
     property: "Пятилетний опыт работы с криптовалютой. Идейний вдохновитель и ведущий спик",
-    info: "Пятилетний опыт работы с криптовалютой. Идейний вдохновитель и ведущий спикер компании Spacebot Bitteam"
+    info11: "Пятилетний опыт работы с криптовалютой. Идейний вдохновитель и ведущий спикер компании Spacebot Bitteam",
+    info2: "Пятилетний опыт работы с криптовалютой. Идейний вдохновитель и ведущий спикер компании Spacebot Bitteam",
+    info3: "Пятилетний опыт работы с криптовалютой. Идейний вдохновитель и ведущий спикер компании Spacebot Bitteam",
+    info4: "Пятилетний опыт работы с криптовалютой. Идейний вдохновитель и ведущий спикер компании Spacebot Bitteam",
+    info5: "Пятилетний опыт работы с криптовалютой. Идейний вдохновитель и ведущий спикер компании Spacebot Bitteam"
+
 }, {
     img: "./face2.jpg",
     description: "Эксперт по бизнесу",
     name: "Сергей Фрост",
     property: "Пятилетний опыт работы с криптовалютой. Идейний вдохновитель и ведущий спик",
-    info: "Пятилетний опыт работы с криптовалютой. Идейний вдохновитель и ведущий спикер компании Spacebot Bitteam"
+    info1: "Пятилетний опыт работы с криптовалютой. Идейний вдохновитель и ведущий спикер компании Spacebot Bitteam",
+    info2: "Пятилетний опыт работы с криптовалютой. Идейний вдохновитель и ведущий спикер компании Spacebot Bitteam",
+    info3: "Пятилетний опыт работы с криптовалютой. Идейний вдохновитель и ведущий спикер компании Spacebot Bitteam",
+    info4: "Пятилетний опыт работы с криптовалютой. Идейний вдохновитель и ведущий спикер компании Spacebot Bitteam",
+    info5: "Пятилетний опыт работы с криптовалютой. Идейний вдохновитель и ведущий спикер компании Spacebot Bitteam"
+
 }, {
     img: "./face3.jpg",
     description: "Эксперт по бизнесу",
     name: "Дарья Мороз",
     property: "Пятилетний опыт работы с криптовалютой. Идейний вдохновитель и ведущий спик",
-    info: "Пятилетний опыт работы с криптовалютой. Идейний вдохновитель и ведущий спикер компании Spacebot Bitteam"
+    info1: "Пятилетний опыт работы с криптовалютой. Идейний вдохновитель и ведущий спикер компании Spacebot Bitteam",
+    info2: "Пятилетний опыт работы с криптовалютой. Идейний вдохновитель и ведущий спикер компании Spacebot Bitteam",
+    info3: "Пятилетний опыт работы с криптовалютой. Идейний вдохновитель и ведущий спикер компании Spacebot Bitteam",
+    info4: "Пятилетний опыт работы с криптовалютой. Идейний вдохновитель и ведущий спикер компании Spacebot Bitteam",
+    info5: "Пятилетний опыт работы с криптовалютой. Идейний вдохновитель и ведущий спикер компании Spacebot Bitteam"
+
 }, {
     img: "./face1.jpg",
     description: "Эксперт по бизнесу",
     name: "Брюнеткин Максим",
     property: "Пятилетний опыт работы с криптовалютой. Идейний вдохновитель и ведущий спик",
-    info: "Пятилетний опыт работы с криптовалютой. Идейний вдохновитель и ведущий спикер компании Spacebot Bitteam"
+    info1: "Пятилетний опыт работы с криптовалютой. Идейний вдохновитель и ведущий спикер компании Spacebot Bitteam",
+    info2: "Пятилетний опыт работы с криптовалютой. Идейний вдохновитель и ведущий спикер компании Spacebot Bitteam",
+    info3: "Пятилетний опыт работы с криптовалютой. Идейний вдохновитель и ведущий спикер компании Spacebot Bitteam",
+    info4: "Пятилетний опыт работы с криптовалютой. Идейний вдохновитель и ведущий спикер компании Spacebot Bitteam",
+    info5: "Пятилетний опыт работы с криптовалютой. Идейний вдохновитель и ведущий спикер компании Spacebot Bitteam"
+
 }, {
     img: "./face2.jpg",
     description: "Эксперт по бизнесу",
     name: "Сергей Фрост",
     property: "Пятилетний опыт работы с криптовалютой. Идейний вдохновитель и ведущий спик",
-    info: "Пятилетний опыт работы с криптовалютой. Идейний вдохновитель и ведущий спикер компании Spacebot Bitteam"
+    info1: "Пятилетний опыт работы с криптовалютой. Идейний вдохновитель и ведущий спикер компании Spacebot Bitteam",
+    info2: "Пятилетний опыт работы с криптовалютой. Идейний вдохновитель и ведущий спикер компании Spacebot Bitteam",
+    info3: "Пятилетний опыт работы с криптовалютой. Идейний вдохновитель и ведущий спикер компании Spacebot Bitteam",
+    info4: "Пятилетний опыт работы с криптовалютой. Идейний вдохновитель и ведущий спикер компании Spacebot Bitteam",
+    info5: "Пятилетний опыт работы с криптовалютой. Идейний вдохновитель и ведущий спикер компании Spacebot Bitteam"
+
 }, {
     img: "./face3.jpg",
     description: "Эксперт по бизнесу",
     name: "Дарья Мороз",
     property: "Пятилетний опыт работы с криптовалютой. Идейний вдохновитель и ведущий спик",
-    info: "Пятилетний опыт работы с криптовалютой. Идейний вдохновитель и ведущий спикер компании Spacebot Bitteam"
+    info1: "Пятилетний опыт работы с криптовалютой. Идейний вдохновитель и ведущий спикер компании Spacebot Bitteam",
+    info2: "Пятилетний опыт работы с криптовалютой. Идейний вдохновитель и ведущий спикер компании Spacebot Bitteam",
+    info3: "Пятилетний опыт работы с криптовалютой. Идейний вдохновитель и ведущий спикер компании Spacebot Bitteam",
+    info4: "Пятилетний опыт работы с криптовалютой. Идейний вдохновитель и ведущий спикер компании Spacebot Bitteam",
+    info5: "Пятилетний опыт работы с криптовалютой. Идейний вдохновитель и ведущий спикер компании Spacebot Bitteam"
+
 }]
 export default () => {
+    const [flag, setFlag] = useState()
     const classes = useStyle()
     return <div className="teachers">
         <div className="conteiner">
             <div className={classes.teachers__title}>Преподаватели INTERNATIONAL SMART PLACE </div>
             <div className={classes.teachers__text}>Это высококвалифицированная команда управленцев, менеджеров, бизнес-тренеров и экспертов. Общение с ними даст вам не только новые знания и идеи, но и импульс к их реализации</div>
             <div className={classes.teachers__table}>
-                {teachers.map(elem => {
-                    return <div className={classes.teachers__elem}>
-                        <div className={classes.info}>{elem.info}</div>
+                {teachers.map((elem, index) => {
+                    return <div className={classes.teachers__elem}
+                    onMouseEnter={()=>setFlag(index)}
+                    onMouseLeave={()=>setFlag(null)}
+                    >
+                        {flag == index ?
+                        <div className={classes.info}>{elem.info}
+                            <p className={classes.info}>{elem.info1}</p>
+                            <p className={classes.info}>{elem.info2}</p>
+                            <p className={classes.info}>{elem.info3}</p>
+                            <p className={classes.info}>{elem.info4}</p>
+                            <p className={classes.info}>{elem.info5}</p></div> :
                         <div className={classes.teachers__elem__home}>
-                        <img src={elem.img} alt="" />
-                        <div className={classes.description}>{elem.description}</div>
-                        <div className={classes.name}>{elem.name}</div>
-                        <div className={classes.property}>{elem.property}</div>
-                    </div>
+                            <img src={elem.img} alt="" />
+                            <div className={classes.description}>{elem.description}</div>
+                            <div className={classes.name}>{elem.name}</div>
+                            <div className={classes.property}>{elem.property}</div>
+                        </div>
+                         } 
+
                     </div>
                 })}
             </div>

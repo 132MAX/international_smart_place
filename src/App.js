@@ -8,6 +8,8 @@ import UndergoingTraning from "./component/undergoingTraining/UndergoingTraining
 import Stages from "./component/stages/Stages"
 import Benefits from "./component/benefits/Benefits"
 import Teachers from "./component/teachers/Teachers"
+import Partner from "./component/partner/Partner"
+import Review from "./component/review/Review"
 import "./reset.css"
 
 function App() {
@@ -24,6 +26,8 @@ function App() {
       <Stages/>
       <Benefits/>
       <Teachers/>
+      <Partner/>
+      <Review/>
     </div>
   );
 }

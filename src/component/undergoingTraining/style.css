@@ -3,5 +3,10 @@
 }
 
 .slick-dots li button {
+    background-color: #fff;
     display: none;
+}
+
+.Oleg {
+    color: bisque;
 }
