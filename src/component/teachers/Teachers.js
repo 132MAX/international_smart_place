@@ -6,8 +6,9 @@ const useStyle = createUseStyles({
         fontSize: 40,
         lineHeight: "43px",
     },
+
     teachers__text: {
-        width: 922,
+        maxWidth: 922,
         height: 79,
         fontFamily: 'Gordita',
         fontStyle: 'normal',
@@ -21,7 +22,10 @@ const useStyle = createUseStyles({
         display: 'flex',
         justifyContent: 'space-between',
         flexWrap: 'wrap',
-
+        "@media(max-width:870px)":{
+            justifyContent: 'center',
+            
+        }
 
     },
     teachers__elem: {

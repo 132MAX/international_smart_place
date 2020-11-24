@@ -44,7 +44,13 @@ const useStyle = createUseStyles({
         marginBottom: "20px",
         display: "flex",
         justifyContent: "space-between",
-        alignItems: "center"
+        alignItems: "center",
+        "@media(max-width:1400px)":{
+            justifyContent: 'space-around',
+            
+            
+        }
+        
     }
     , heading: {
         lineHeight: "43px",
@@ -80,18 +86,23 @@ const useStyle = createUseStyles({
         "&:before": {
             content: `""`,
             position: "absolute",
-            top: "144px", left: "231px",
-            
+            top: "144px", left: "-231px",
             width: 272,
-height: 280,
-borderRadius: 30,
+            height: 280,
+            borderRadius: 30,
             width: "272px",
             height: "280px",
             backgroundImage: `url("./foto8.png")`,
             backgroundPosition: 'center',
             backgroundSize: 'cover',
-            backgroundRepeat: 'no-repeat'
-        }
+            backgroundRepeat: 'no-repeat',
+            "@media(max-width:1300px)":{
+                display: 'none',
+                
+                
+            }
+        },
+      
     }
     , elem: {
         display: "flex",
@@ -174,7 +185,7 @@ export default () => {
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
-        autoplay: true,
+        autoplay: false,
         speed: 2000,
         cssEase: "linear"
     };
