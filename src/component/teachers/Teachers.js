@@ -6,8 +6,9 @@ const useStyle = createUseStyles({
         fontSize: 40,
         lineHeight: "43px",
     },
+
     teachers__text: {
-        width: 922,
+        maxWidth: 922,
         height: 79,
         fontFamily: 'Gordita',
         fontStyle: 'normal',
@@ -21,7 +22,10 @@ const useStyle = createUseStyles({
         display: 'flex',
         justifyContent: 'space-between',
         flexWrap: 'wrap',
-
+        "@media(max-width:870px)":{
+            justifyContent: 'center',
+            
+        }
 
     },
     teachers__elem: {
@@ -30,17 +34,13 @@ const useStyle = createUseStyles({
         boxShadow: '4px 4px 20px rgba(0, 0, 0, 0.25)',
         marginBottom: 137,
         position: 'relative',
-        "&:hover" : {
-            // display: 'none',
-         }
+        
     },
     teachers__elem__home: {
         width: "100%",
         height: "100%",
         transition:"all 0.4s",
-        "&:hover": {
-           // display: 'none',
-        }
+       
     },
     info: {
      

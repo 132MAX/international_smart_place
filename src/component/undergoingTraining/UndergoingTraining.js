@@ -20,7 +20,8 @@ const useStyle = createUseStyles({
         backgroundSize: ' 100% 100%',
         bottom:"-250px",
         left:"0",
-        backgroundRepeat: 'no-repeat'
+        backgroundRepeat: 'no-repeat',
+        
         
     }
     , trainingLine2 : {
@@ -31,7 +32,7 @@ const useStyle = createUseStyles({
         backgroundSize: ' 100% 100%',
         bottom:"-250px",
         left:"0",
-        backgroundRepeat: 'no-repeat'
+        backgroundRepeat: 'no-repeat',
         
     }
     , title: {
@@ -45,7 +46,13 @@ const useStyle = createUseStyles({
          marginBottom: "20px", 
          display: "flex",
           justifyContent: "space-between", 
-         alignItems: "center"
+         alignItems: "center",
+         "@media(max-width: 1292px)":{
+             justifyContent: 'space-around',
+         },
+         "@media(max-width: 1024px)":{
+            justifyContent: 'center',
+        }
     }
     , heading: {
         lineHeight: "43px",
@@ -77,13 +84,22 @@ const useStyle = createUseStyles({
                 backgroundPosition: 'center', 
                 backgroundSize: 'cover', 
                 backgroundRepeat: 'no-repeat'
-        }
+        },
+        
+ "@media(max-width: 942px)":{
+    display: 'none',
+ }
+
+
     }
     ,elem:{
         display:"flex",
         width: "333px",
         height: "388px",
-        flexWrap:"wrap"
+        flexWrap:"wrap",
+        "@media(max-width: 942px)":{
+            display: 'none',
+         }
     }
     ,file__img:{
         width: "148px",
@@ -158,7 +174,7 @@ export default () => {
             slidesToShow: 1,
             slidesToScroll: 1,
             autoplay: true,
-      speed: 2000,
+      speed: 2500,
       cssEase: "linear"
           };
     return <div className="">

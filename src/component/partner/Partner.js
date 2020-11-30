@@ -56,6 +56,8 @@ const useStyle = createUseStyles({
     },
     partner__line: {
         display: "flex",
+        flexWrap: 'wrap',
+        
         justifyContent: 'space-between',
         position: 'relative',
         zIndex: "2",
@@ -67,7 +69,15 @@ const useStyle = createUseStyles({
             background: "#CDCCCC",
             zIndex: "-2",
             top: 17,
+            '@media (max-width: 850px)':{
+                width: "82%",
+            }
         }
+    },
+    partner__line__elem:{
+       marginBottom: 60,
+       
+        
     },
     num: {
         width: 45,
