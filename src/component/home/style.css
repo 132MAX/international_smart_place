@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 .home__info__img::before {
     position: absolute;
     content: "";
@@ -61,13 +65,7 @@
     z-index: 1;
 }
 
-
-
-  
-  
-
 .home__menu {
-
     display: flex;
     justify-content: space-between;
 }
@@ -215,20 +213,21 @@
     opacity: 1;
     margin-bottom: 22px;
 }
-.products{
-}
+
+.products {}
+
 .products,
-.products__elem{
+.products__elem {
     margin-right: 87px;
     display: flex;
     align-items: center;
     margin-top: 28px;
     font-weight: bold;
     font-family: "Rubik" sans-serif;
-font-style: normal;
-font-size: 20px;
-
+    font-style: normal;
+    font-size: 20px;
 }
+
 .products__elem img {
     width: 56px;
     height: 56px;

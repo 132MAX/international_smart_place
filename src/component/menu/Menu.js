@@ -1,7 +1,20 @@
-import React, { useState } from "react"
+import React, { useState , useEffect} from "react"
 import "./style.css"
+
 export default()=>{
-    return <div className="conteiner">
+    const [sees , setSees]=useState(0)
+    const  onScroll=()=>{
+        const positionScroll= document.body.scrollTop|| document.documentElement.scrollTop
+        console.log(positionScroll)
+        setSees(positionScroll/1000)
+    }
+        
+    
+    useEffect(()=>{
+    window.addEventListener("scroll",onScroll)
+    },[]) 
+    return  <div className="menuFixed" style={{opacity:sees}}>
+        <div className="conteiner">
     <menu className="home__menu  ">
     <div className="home__menu__logo ">
         International Smart Place</div>
@@ -14,5 +27,6 @@ export default()=>{
     
     </nav>
 </menu>
+</div> 
 </div> 
 }

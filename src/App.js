@@ -17,7 +17,7 @@ function App() {
   return (
     <div className="App">
       <Home/>
-      <div className="menuFixed"><Menu/></div> 
+      <Menu/>
       <What/>
       <Banner/>
       <During/>
