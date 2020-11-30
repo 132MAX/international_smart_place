@@ -43,6 +43,9 @@
         .banner__fonts::before {
             display: none;
         }
+        .during__answer {
+            max-width: 450px;
+        }
     }
     
     @media(max-width:890px) {
@@ -52,6 +55,9 @@
         .home__menu__nav a,
         .home__menu__nav div {
             margin-left: 8px;
+        }
+        .during__answer {
+            max-width: 330px;
         }
     }
     
